@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat con Angel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: #535353;
+            display: grid;
+            grid-template-rows: 70vh 10vh;
+            grid-template-columns: 80%;
+            row-gap: 1rem;
+            place-content: center;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(auto-fill, auto);
+            border:thin solid #f3f716;
+            width: 100%;
+            border-radius: .3rem;
+            padding: 1rem;
+            overflow-y: scroll;
+            row-gap: 10px;
+        }
+        .square-text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-between;
+        }
+        .square-text > textarea{
+            resize: none;
+            width: 93%;
+            height: 3rem;
+            border-radius: .3rem;
+            border:thin solid #f3f716 ;
+            outline: none;
+            background-color: transparent;
+        }
+        .square-text > button{
+            background-color: transparent;
+            outline: none;
+            padding: 1rem;
+            border-radius: 2rem;
+            color: #000;
+            background-color: #f3f716;
+            border: none;
+            cursor: pointer;
+        }
+        .content-user{
+            display: grid;
+            grid-template-columns: 40px 240px;
+            grid-template-rows: 40px auto;
+            column-gap: 8px;
+            padding: .2rem;
+            background-color: #f3f71650;
+            width: 300px;
+            height: max-content;
+            border-radius: .4rem;
+        }
+        .content-user img{
+            width: 100%;
+            height: 100%;
+        }
+        .avatar{
+            width: 100%;
+            overflow: hidden;
+            border-radius: 2rem ;
+        }
+        .user-name{
+            align-self: center;
+        }
+        .user-message{
+            grid-column: 2/3;
+        }
+        .aling-end{
+            background-color: #20aed17a;
+            justify-self: end;
+        }
+    </style>
+</head>
+<body>
+    <div class="content" id="messages"></div> 
+    <form action="" class="square-text" id="formUser">
+        <textarea name="menssageUser" id="" col rows="10"></textarea>
+        <button type="submit"><i class="fa-regular fa-paper-plane"></i></button>
+    </form>
+    <script type="module" src="scripts/aplication.js"></script>
+</body>
+</html>
